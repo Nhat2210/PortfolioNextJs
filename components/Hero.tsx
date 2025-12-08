@@ -3,7 +3,7 @@ import { Spotlight } from "./ui/spotlight";
 import { cn } from "@/lib/cn";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-
+import { Heart } from "lucide-react";
 const Hero = () => {
   return (
     <div className="pb-20 pt-36">
@@ -40,15 +40,16 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;am Nhat Cao, a Front End Developer in Ha Noi!
           </p>
-          <div className="my-10 flex justify-center text-center">
+          <a href="#about">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              className="flex items-center dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
-              <span>Contact me Now &lt;3</span>
+              <p>Contact me Now</p>
+              <Heart width={20} strokeWidth={2} />
             </HoverBorderGradient>
-          </div>
+          </a>
         </div>
       </div>
     </div>
