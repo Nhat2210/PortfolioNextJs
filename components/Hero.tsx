@@ -1,9 +1,8 @@
-import React from "react";
-import { Spotlight } from "./ui/spotlight";
-import { cn } from "@/lib/cn";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
-import { Heart } from "lucide-react";
+import { cn } from '@/lib/cn';
+import { FaLocationArrow } from 'react-icons/fa';
+import Button from './ui/Button';
+import { Spotlight } from './ui/spotlight';
+import { TextGenerateEffect } from './ui/text-generate-effect';
 const Hero = () => {
   return (
     <div className="pb-20 pt-36">
@@ -17,10 +16,10 @@ const Hero = () => {
       <div className="absolute top-0 left-0 flex h-[100vh] w-full items-center justify-center bg-white dark:bg-black">
         <div
           className={cn(
-            "absolute inset-0",
-            "[background-size:70px_70px]",
-            "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-            "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+            'absolute inset-0',
+            '[background-size:70px_70px]',
+            '[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]',
+            'dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]',
           )}
         />
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
@@ -32,23 +31,14 @@ const Hero = () => {
             My NextJs Portfolio
           </h2>
           <TextGenerateEffect
-            className="text-center text-[40px]
-            md:text-5xl
-            lg:text-6xl"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="Code that feels smooth. Interfaces that feel alive."
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;am Nhat Cao, a Front End Developer in Ha Noi!
+            Hi, I&apos;am Nhat Cao - a Front End Developer in Ha Noi &lt;3
           </p>
           <a href="#about">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              className="flex items-center dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-            >
-              <p>Contact me Now</p>
-              <Heart width={20} strokeWidth={2} />
-            </HoverBorderGradient>
+            <Button title={'Show My Works'} icon={<FaLocationArrow />} position="right" />
           </a>
         </div>
       </div>
